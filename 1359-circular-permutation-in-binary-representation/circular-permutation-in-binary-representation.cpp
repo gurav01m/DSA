@@ -1,0 +1,11 @@
+class Solution {
+public:
+    vector<int> circularPermutation(int n, int start) {
+        vector<int>ans;
+        for(int i=0;i<(1<<n);i++){
+            int gray=i^(i>>1);
+            ans.push_back(start^gray);
+        }
+        return ans;
+    }
+};
